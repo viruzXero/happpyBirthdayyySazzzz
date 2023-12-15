@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: pink;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Initial Page with Video */
+#video-section video {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+/* Main Page Styles */
+#main-page h1 {
+    font-size: 2.5em;
+    animation: fadeIn 2s;
+}
+
+/* Photo Gallery Styles */
+#photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo {
+    position: relative;
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 300px;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Timeline Styles */
+#timeline .timeline-event {
+    margin-bottom: 30px;
+    animation: slideIn 1s;
+}
+
+/* Uplifting Messages Styles */
+#messages button {
+    background-color: white;
+    color: pink;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+#messages button:hover {
+    background-color: lightpink;
+}
+
+/* Final Message Styles */
+#final-message {
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+.photo img.enlarged {
+    transform: scale(2);
+    z-index: 10;
+    position: absolute;
+}
